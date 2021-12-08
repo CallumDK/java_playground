@@ -7,7 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FibonacciSequenceTests {
     int[] expectedSequence10 = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
-
     int fibonacci31 = 832040;
 
     @Test
