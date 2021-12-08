@@ -1,13 +1,11 @@
 package challenges.week_2.array_merger;
 
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 public class ArrayMerger {
 
 
-    public static int[] merger(int[] arr1, int[] arr2){
+    public static int[] arrayMerge(int[] arr1, int[] arr2){
         int aLength = arr1.length;
         int bLength = arr2.length;
         int[] mergedArr = new int[aLength + bLength];
@@ -38,16 +36,15 @@ public class ArrayMerger {
         return descending;
     }
 
-    /*
-    public static int[] removeDuplicates(int[] arr){
-        Set<Integer> linkedHashSet = new LinkedHashSet<>(Arrays.asList(arr));
-        int[] dupesRemoved = new int[linkedHashSet.size()];
-        for(Integer i : linkedHashSet){
-            dupesRemoved[i] = i;
+
+    public static int[] removeDuplicates(int[] intArray){
+        Set<Integer> linkedHashSet = new LinkedHashSet<>();
+        for (int i : intArray) {
+            linkedHashSet.add(i);
         }
-        return dupesRemoved;
+        return linkedHashSet.stream().mapToInt(i -> i).toArray();
     }
-     */
+
 
 
 
@@ -56,7 +53,7 @@ public class ArrayMerger {
         int[] b = {5, 4, 3, 2, 1, 0};
 
 
-        int[] result = merger(a, b);
+        int[] result = arrayMerge(a, b);
 
         System.out.println(Arrays.toString(result));
 
@@ -67,8 +64,8 @@ public class ArrayMerger {
         int[] resultThree = sortDesc(result);
         System.out.println(Arrays.toString(resultThree));
 
-        //int[] resultFour = removeDuplicates(result);
-        //System.out.println(Arrays.toString(resultFour));
+        int[] resultFour = removeDuplicates(result);
+        System.out.println(Arrays.toString(resultFour));
 
 
     }
