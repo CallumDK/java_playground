@@ -36,11 +36,6 @@ public class FizzBuzz {
         }
         return fizzBuzzArr;
     }
-
-/*    public static void main(String[] args) {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-        System.out.println(fizzBuzz.fizzBuzzGenerator(15).toString());
-    } */
 }
 
 
